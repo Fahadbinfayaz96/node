@@ -12,7 +12,19 @@
   "author": "fahad bin fayaz",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.19.2",
-    "mongoose": "^8.4.1"
-  }
+    "@aws-sdk/client-s3": "^3.830.0",
+    "@aws-sdk/s3-request-presigner": "^3.830.0",
+    "cors": "^2.8.5",
+    "express": "^4.21.2",
+    "mongoose": "^8.4.1",
+    "multer": "^2.0.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Fahadbinfayaz96/node.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Fahadbinfayaz96/node/issues"
+  },
+  "homepage": "https://github.com/Fahadbinfayaz96/node#readme"
 }
