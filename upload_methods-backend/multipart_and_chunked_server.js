@@ -6,13 +6,12 @@ const path = require('path');
 const app = express();
 const PORT = 3000;
 
-// Ensure upload directory exists
+
 const uploadDir = path.join(__dirname, 'uploads');
 if (!fs.existsSync(uploadDir)) fs.mkdirSync(uploadDir);
 
-// ==============================
+
 // PUT CHUNKED UPLOAD
-// ==============================
 app.put('/upload-chunked/:filename', (req, res) => {
   const filePath = path.join(uploadDir, req.params.filename);
   const writeStream = fs.createWriteStream(filePath);
@@ -29,9 +28,8 @@ app.put('/upload-chunked/:filename', (req, res) => {
   });
 });
 
-// ==============================
+
 // PUT MULTIPART UPLOAD
-// ==============================
 const storage = multer.diskStorage({
   destination: (_, __, cb) => cb(null, uploadDir),
   filename: (req, file, cb) => cb(null, file.originalname),
@@ -43,9 +41,7 @@ app.put('/upload-multipart', upload.single('file'), (req, res) => {
   res.status(200).send({ message: 'Multipart upload complete', path: req.file.path });
 });
 
-// ==============================
-// START SERVER
-// ==============================
+
 app.listen(PORT, () => {
   console.log(`Server running at http://192.168.1.17:${PORT}`);
 });
