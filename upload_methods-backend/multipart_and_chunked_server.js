@@ -43,5 +43,5 @@ app.put('/upload-multipart', upload.single('file'), (req, res) => {
 
 
 app.listen(PORT, () => {
-  console.log(`Server running at http://192.168.1.17:${PORT}`);
+  console.log(`Server running at http://000.000.0.00:${PORT}`);
 });
