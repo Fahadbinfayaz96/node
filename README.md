@@ -2,7 +2,7 @@
 This Node.js backend service demonstrates three different file upload methods, suitable for modern applications:
 
 🚀 Features
-1. Direct Upload with Presigned URLs Secure client-side uploads to S3-compatible storage(localstack).
+1. Direct Upload with Presigned URLs Secure client-side uploads to S3-compatible storage(via LocalStack).
 3. Multipart Upload Traditional form-based uploads via HTML forms or HTTP clients.
 4. Chunked Upload Efficient streaming of large files in smaller chunks.
 
