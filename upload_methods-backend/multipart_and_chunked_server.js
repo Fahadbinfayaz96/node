@@ -21,7 +21,7 @@ const uploadDir = path.join(__dirname, 'uploads');
 if (!fs.existsSync(uploadDir)) {
   fs.mkdirSync(uploadDir);
 }
-
+app.use('/uploads', express.static(uploadDir));
 /**
  * PUT endpoint for chunked file uploads
  * @name PUT/upload-chunked/:filename
